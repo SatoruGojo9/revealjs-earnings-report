@@ -18,11 +18,22 @@
             font-size: 32px;
         }
         .email-badge {
-            background: #42affa;
-            padding: 10px 20px;
-            border-radius: 5px;
+            background: white;
+            padding: 15px 30px;
+            border-radius: 8px;
             font-family: monospace;
-            font-size: 0.7em;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #000;
+            display: inline-block;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .email-label {
+            color: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 10px;
         }
         .chart-container {
             background: rgba(255,255,255,0.1);
@@ -42,13 +53,16 @@
     <div class="reveal">
         <div class="slides">
             
-            <!-- Slide 1: Title Slide -->
+            <!-- Slide 1: Title Slide with PROMINENT EMAIL -->
             <section>
                 <h1>Q4 2024 Earnings Report</h1>
                 <h3>Financial Institution Quarterly Review</h3>
-                <p style="margin-top: 50px;">
-                    <small>Prepared by: Technical Consultant</small><br>
-                    <span class="email-badge">24f1002697@ds.study.iitm.ac.in</span>
+                <div style="margin-top: 60px;">
+                    <p class="email-label">PREPARED BY:</p>
+                    <div class="email-badge">24f1002697@ds.study.iitm.ac.in</div>
+                </div>
+                <p style="margin-top: 40px; font-size: 0.8em;">
+                    Technical Consultant | Data Science Department
                 </p>
                 <aside class="notes">
                     Welcome everyone to the Q4 2024 earnings presentation. 
@@ -77,6 +91,10 @@
                     * AI-driven fraud detection system
                     * Expansion into emerging markets
                     * Sustainability-focused investment products
+                    
+                    <div style="margin-top: 40px; font-size: 0.7em; color: white;">
+                    Contact: 24f1002697@ds.study.iitm.ac.in
+                    </div>
                 </textarea>
                 <aside class="notes">
                     This slide provides a high-level overview of our performance.
@@ -123,6 +141,7 @@
                 <h2>Data Analysis Pipeline</h2>
                 <pre><code class="python" data-line-numbers="1-3|5-7|9-11|13-15">
 # Financial data processing pipeline
+# Author: 24f1002697@ds.study.iitm.ac.in
 import pandas as pd
 import numpy as np
 
@@ -188,6 +207,7 @@ print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
                 <h2>Customer Analytics Query</h2>
                 <pre><code class="sql" data-line-numbers="1-2|4-6|8-10|12-14">
 -- Analyze customer transaction patterns
+-- Query by: 24f1002697@ds.study.iitm.ac.in
 SELECT 
     customer_segment,
     
@@ -265,14 +285,17 @@ ORDER BY revenue_per_customer DESC;
                 </aside>
             </section>
 
-            <!-- Slide 9: Q&A -->
+            <!-- Slide 9: Q&A with PROMINENT EMAIL -->
             <section>
                 <h1>Questions & Discussion</h1>
-                <p style="margin-top: 50px;">Thank you for your attention</p>
-                <p style="margin-top: 30px;">
-                    <small>Contact: <span class="email-badge">24f1002697@ds.study.iitm.ac.in</span></small>
-                </p>
-                <p style="margin-top: 30px; font-size: 0.7em; opacity: 0.7;">
+                <p style="margin-top: 50px; font-size: 1.2em;">Thank you for your attention</p>
+                
+                <div style="margin-top: 60px;">
+                    <p class="email-label">CONTACT INFORMATION:</p>
+                    <div class="email-badge">24f1002697@ds.study.iitm.ac.in</div>
+                </div>
+                
+                <p style="margin-top: 50px; font-size: 0.7em; opacity: 0.7;">
                     Press 'O' for overview | Press 'S' for speaker notes | Press '?' for help
                 </p>
                 <aside class="notes">
@@ -343,7 +366,7 @@ ORDER BY revenue_per_customer DESC;
         // Log when ready
         Reveal.on('ready', event => {
             console.log('RevealJS presentation loaded successfully!');
-            console.log('Press "S" for speaker notes, "O" for overview, "?" for help');
+            console.log('Email: 24f1002697@ds.study.iitm.ac.in');
         });
     </script>
 </body>
