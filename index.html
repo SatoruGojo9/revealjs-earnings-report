@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4 Earnings Report 2024</title>
+    
+    <!-- RevealJS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/moon.css">
+    
+    <!-- Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        .reveal {
+            font-size: 32px;
+        }
+        .email-badge {
+            background: #42affa;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 0.7em;
+        }
+        .chart-container {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .highlight-box {
+            background: rgba(66, 175, 250, 0.2);
+            padding: 20px;
+            border-left: 4px solid #42affa;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            
+            <!-- Slide 1: Title Slide -->
+            <section>
+                <h1>Q4 2024 Earnings Report</h1>
+                <h3>Financial Institution Quarterly Review</h3>
+                <p style="margin-top: 50px;">
+                    <small>Prepared by: Technical Consultant</small><br>
+                    <span class="email-badge">24f1002697@ds.study.iitm.ac.in</span>
+                </p>
+                <aside class="notes">
+                    Welcome everyone to the Q4 2024 earnings presentation. 
+                    This report covers our financial performance, key metrics, and strategic insights.
+                    Press 'S' to view speaker notes throughout the presentation.
+                </aside>
+            </section>
+
+            <!-- Slide 2: Executive Summary (Markdown) -->
+            <section data-markdown>
+                <textarea data-template>
+                    ## Executive Summary
+                    
+                    ### Key Highlights
+                    
+                    - **Revenue Growth**: 15.2% YoY increase
+                    - **Net Income**: $2.3B (up 12% from Q3)
+                    - **Customer Base**: 5.2M active users (+8%)
+                    - **Digital Adoption**: 78% of transactions online
+                    
+                    ---
+                    
+                    ### Strategic Initiatives
+                    
+                    * Enhanced mobile banking platform
+                    * AI-driven fraud detection system
+                    * Expansion into emerging markets
+                    * Sustainability-focused investment products
+                </textarea>
+                <aside class="notes">
+                    This slide provides a high-level overview of our performance.
+                    Note the strong revenue growth and digital adoption rates.
+                    Be prepared to discuss the strategic initiatives in detail.
+                </aside>
+            </section>
+
+            <!-- Slide 3: Financial Metrics with Fragments -->
+            <section>
+                <h2>Financial Performance Metrics</h2>
+                <div class="chart-container">
+                    <ul>
+                        <li class="fragment fade-in">
+                            <strong>Total Assets:</strong> $125.6B 
+                            <span class="fragment highlight-blue">(+7.3% QoQ)</span>
+                        </li>
+                        <li class="fragment fade-in">
+                            <strong>Loan Portfolio:</strong> $78.2B 
+                            <span class="fragment highlight-green">(+5.1% QoQ)</span>
+                        </li>
+                        <li class="fragment fade-in">
+                            <strong>Return on Equity:</strong> 14.8% 
+                            <span class="fragment highlight-blue">(Industry avg: 12.5%)</span>
+                        </li>
+                        <li class="fragment fade-in">
+                            <strong>Cost-to-Income Ratio:</strong> 52.3% 
+                            <span class="fragment highlight-green">(Target: <55%)</span>
+                        </li>
+                    </ul>
+                </div>
+                <p class="fragment fade-up" style="margin-top: 30px; font-style: italic;">
+                    All metrics exceed industry benchmarks
+                </p>
+                <aside class="notes">
+                    Walk through each metric slowly, emphasizing the quarter-over-quarter growth.
+                    Highlight that our ROE significantly exceeds the industry average.
+                    The cost-to-income ratio shows operational efficiency.
+                </aside>
+            </section>
+
+            <!-- Slide 4: Python Code - Data Analysis -->
+            <section>
+                <h2>Data Analysis Pipeline</h2>
+                <pre><code class="python" data-line-numbers="1-3|5-7|9-11|13-15">
+# Financial data processing pipeline
+import pandas as pd
+import numpy as np
+
+# Load quarterly earnings data
+df = pd.read_csv('q4_earnings.csv')
+df['date'] = pd.to_datetime(df['date'])
+
+# Calculate key metrics
+revenue_growth = df['revenue'].pct_change() * 100
+profit_margin = (df['net_income'] / df['revenue']) * 100
+
+# Risk-adjusted returns
+sharpe_ratio = df['returns'].mean() / df['returns'].std()
+var_95 = np.percentile(df['returns'], 5)
+
+# Generate report
+print(f"Revenue Growth: {revenue_growth.mean():.2f}%")
+print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
+                </code></pre>
+                <aside class="notes">
+                    This demonstrates our automated data analysis pipeline.
+                    Line 1-3: Import necessary libraries for financial analysis.
+                    Line 5-7: Load and prepare the quarterly data.
+                    Line 9-11: Calculate growth metrics and profitability.
+                    Line 13-15: Compute risk-adjusted performance indicators.
+                </aside>
+            </section>
+
+            <!-- Slide 5: Mathematical Formulas -->
+            <section>
+                <h2>Risk Assessment Models</h2>
+                
+                <div class="highlight-box">
+                    <h3>Value at Risk (VaR)</h3>
+                    <p>VaR at confidence level α:</p>
+                    <p>\[VaR_\alpha = \mu + \sigma \cdot z_\alpha\]</p>
+                </div>
+
+                <div class="fragment highlight-box">
+                    <h3>Sharpe Ratio</h3>
+                    <p>Risk-adjusted return measurement:</p>
+                    <p>\[S = \frac{R_p - R_f}{\sigma_p}\]</p>
+                    <p><small>Where \(R_p\) = portfolio return, \(R_f\) = risk-free rate, \(\sigma_p\) = standard deviation</small></p>
+                </div>
+
+                <div class="fragment highlight-box">
+                    <h3>Capital Adequacy Ratio</h3>
+                    <p>\[CAR = \frac{Tier_1 + Tier_2}{RWA} \geq 0.08\]</p>
+                    <p><small>RWA = Risk-Weighted Assets</small></p>
+                </div>
+                
+                <aside class="notes">
+                    These are the core risk models we use for portfolio management.
+                    VaR helps us understand potential losses at different confidence levels.
+                    Sharpe ratio shows our risk-adjusted performance - higher is better.
+                    CAR ensures we maintain regulatory capital requirements.
+                    Our current CAR is 12.3%, well above the 8% minimum.
+                </aside>
+            </section>
+
+            <!-- Slide 6: SQL Query Example -->
+            <section>
+                <h2>Customer Analytics Query</h2>
+                <pre><code class="sql" data-line-numbers="1-2|4-6|8-10|12-14">
+-- Analyze customer transaction patterns
+SELECT 
+    customer_segment,
+    
+    COUNT(DISTINCT customer_id) as total_customers,
+    AVG(transaction_amount) as avg_transaction,
+    
+    SUM(CASE WHEN channel = 'mobile' 
+        THEN 1 ELSE 0 END) as mobile_transactions,
+    
+    (SUM(transaction_amount) / 
+     COUNT(DISTINCT customer_id)) as revenue_per_customer
+     
+FROM transactions
+WHERE transaction_date >= '2024-10-01'
+GROUP BY customer_segment
+ORDER BY revenue_per_customer DESC;
+                </code></pre>
+                <aside class="notes">
+                    This query helps us understand customer behavior by segment.
+                    We track total customers, average transaction size, and channel preferences.
+                    Mobile transactions are particularly important for digital strategy.
+                    Revenue per customer helps identify our most valuable segments.
+                </aside>
+            </section>
+
+            <!-- Slide 7: Animated Growth Chart -->
+            <section>
+                <h2>Revenue Growth Trajectory</h2>
+                <div class="r-stack">
+                    <div class="fragment fade-out" data-fragment-index="0">
+                        <h3>Q1 2024: $450M</h3>
+                        <div style="height: 100px; background: #42affa; width: 45%;"></div>
+                    </div>
+                    <div class="fragment fade-in-then-out" data-fragment-index="0">
+                        <h3>Q2 2024: $520M</h3>
+                        <div style="height: 100px; background: #42affa; width: 52%;"></div>
+                    </div>
+                    <div class="fragment fade-in-then-out" data-fragment-index="1">
+                        <h3>Q3 2024: $585M</h3>
+                        <div style="height: 100px; background: #42affa; width: 58%;"></div>
+                    </div>
+                    <div class="fragment fade-in" data-fragment-index="2">
+                        <h3>Q4 2024: $670M</h3>
+                        <div style="height: 100px; background: #4caf50; width: 67%;"></div>
+                        <p style="color: #4caf50; margin-top: 20px;">
+                            <strong>↑ 48.9% Annual Growth</strong>
+                        </p>
+                    </div>
+                </div>
+                <aside class="notes">
+                    This animation shows our consistent quarter-over-quarter growth.
+                    Note the acceleration in Q4, driven by holiday season and new product launches.
+                    The 48.9% annual growth significantly outpaces market expectations.
+                </aside>
+            </section>
+
+            <!-- Slide 8: Key Takeaways -->
+            <section>
+                <h2>Key Takeaways</h2>
+                <ol>
+                    <li class="fragment fade-right">Strong financial performance across all metrics</li>
+                    <li class="fragment fade-right">Digital transformation driving efficiency gains</li>
+                    <li class="fragment fade-right">Risk management models ensuring stability</li>
+                    <li class="fragment fade-right">Customer growth exceeding industry trends</li>
+                    <li class="fragment fade-right">Strategic positioning for 2025 growth</li>
+                </ol>
+                <div class="fragment fade-up" style="margin-top: 50px; padding: 20px; background: rgba(76,175,80,0.2); border-radius: 10px;">
+                    <p><strong>Outlook:</strong> Projecting 20% revenue growth for 2025</p>
+                </div>
+                <aside class="notes">
+                    Summarize the main points from the presentation.
+                    Emphasize our strong position and positive outlook.
+                    Be prepared for Q&A about specific metrics or strategic initiatives.
+                    Thank stakeholders for their continued support and confidence.
+                </aside>
+            </section>
+
+            <!-- Slide 9: Q&A -->
+            <section>
+                <h1>Questions & Discussion</h1>
+                <p style="margin-top: 50px;">Thank you for your attention</p>
+                <p style="margin-top: 30px;">
+                    <small>Contact: <span class="email-badge">24f1002697@ds.study.iitm.ac.in</span></small>
+                </p>
+                <p style="margin-top: 30px; font-size: 0.7em; opacity: 0.7;">
+                    Press 'O' for overview | Press 'S' for speaker notes | Press '?' for help
+                </p>
+                <aside class="notes">
+                    Open the floor for questions.
+                    Common questions to prepare for:
+                    - What drove the Q4 revenue spike?
+                    - How sustainable is the growth rate?
+                    - What are the main risks for 2025?
+                    - Plans for capital allocation?
+                    Thank everyone and offer to follow up individually.
+                </aside>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- RevealJS Core -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+    
+    <!-- Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+
+    <!-- Initialize RevealJS -->
+    <script>
+        Reveal.initialize({
+            // Display settings
+            width: 1280,
+            height: 720,
+            margin: 0.04,
+            
+            // Navigation
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            
+            // Transitions
+            transition: 'slide',
+            transitionSpeed: 'default',
+            
+            // Plugins
+            plugins: [
+                RevealMarkdown,
+                RevealHighlight,
+                RevealNotes,
+                RevealMath.KaTeX
+            ],
+            
+            // Plugin configuration
+            markdown: {
+                smartypants: true
+            },
+            
+            // Keyboard shortcuts
+            keyboard: {
+                13: 'next', // Enter key
+                27: function() { // ESC key
+                    if (Reveal.isOverview()) {
+                        Reveal.toggleOverview();
+                    }
+                }
+            }
+        });
+        
+        // Log when ready
+        Reveal.on('ready', event => {
+            console.log('RevealJS presentation loaded successfully!');
+            console.log('Press "S" for speaker notes, "O" for overview, "?" for help');
+        });
+    </script>
+</body>
+</html>
